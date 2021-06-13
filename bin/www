@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+// We use Express to launch a www executable to handle specific, certain tasks.
+// www goes in bin
+// This enables us to put properties in here versus using server.js
+
+const debug = require('debug')('express-example');
+
+// We bring in the app we exported from server.js
+const app = require('../server');
+
+// We bring in the models we exported with index.js
+const db = require("../models");
+
+// We set the port of the app
+app.set('port', process.env.PORT || 3030);
+
+// We sync the models with our db 
+// (thus creating the apropos tables)
+db.sequelize.sync().then(function () {
+	// We set our app to listen to the port we set above
+  const server = app.listen(app.get('port'), function() {
+  	// Then save a log of the listening to our debugger.
+    debug('Express server listening on port ' + server.address().port);
+  });
+});

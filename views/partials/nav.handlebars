@@ -1,0 +1,26 @@
+<!-- Navigation -->
+<div id="nav">
+    <div class="navbar-fixed">
+        <nav class="generic-theme-blue-6 nav-wrapper" role="navigation">
+            <div class="container">
+                
+                    <!-- Logo -->
+                    <a id="logo-container" class="brand-logo" href="/"><img class="shield-icon" src="/assets/img/genericLogo.png"></a>
+                
+                <!-- User-authenticated navbar  -->
+                {{#if isAuthenticated}}
+                <ul class="right">
+                    <li><a href="/search/">Search Investors</a></li>
+                    <li><a href="/mailinglist/">Mailing List</a></li>
+                    <li><a href="/users/sign-out">Logout</a></li>
+                </ul>
+                {{else}}
+                <!-- User-inauthenticated navbar -->
+                <ul class="right">
+                    <li><a class="btn modal-trigger" href="#login-modal">Login</a></li>
+                </ul>
+                {{/if}}
+            </div>
+        </nav>
+    </div>
+</div>

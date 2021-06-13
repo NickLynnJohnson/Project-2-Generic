@@ -1,0 +1,75 @@
+<!-- User signup/registration page -->
+
+<!-- Header Content: insert nav partial -->
+<header>
+    {{> nav }}
+    {{!-- {{> login-modal }} --}}
+</header>
+
+<!-- Main Content: registration theme -->
+<main class="container">
+    <!-- Section 1: registration form -->
+    <section class="section">
+        
+            <div class="row">
+                <div class="col l6">
+                    <form class="container">
+                        <h3>Registration</h3>
+                        <div class="row">
+                            <div id="username-form" class="input-field col s12">
+                                <label for="username-input">Username</label>
+                                <input type="text" name="" id="username-input"  value="" >
+                                <small id="username-feedback" class=""></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="password-form" class="input-field col s12">
+                                <label for="password-input">Password</label>
+                                <input type="password" name="" class="" id="password-input" value="">
+                                <small id="password-feedback" class=""></small>	
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="repeat-password-form" class="input-field col s12">
+                                <label for="repeat-password-input">Repeat Password</label>
+                                <input type="password" name="" class="" id="repeat-password-input" value="">
+                                <small id="repeat-password-feedback" class=""></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="email-form" class="input-field col s12">
+                                <label for="email-input">Email</label>
+                                <input type="email" name="" class="" id="email-input" value="">
+                                <p id="email-feedback" class=""></p>
+                                <small id="email-additional-feedback" class="form-text text-muted"></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="email-repeat-form" class="input-field col s12">
+                                <label for="repeat-email-input">Repeat Email Address</label>
+                                <input type="email" name="" class="" id="repeat-email-input" value="">
+                                <small id="email-repeat-feedback" class=""></small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Section 2: terms and conditions -->
+                <div class="col l6">
+                    <div class="container">
+                        <h3>Terms and Conditions</h3>
+                        <div class="row">
+                            <p>--- This is where Generic can have Terms and Conditions if needed, otherwise perhaps this section should be removed ---</p>
+                        </div>
+                        <div class="row">
+                            <input type="submit" class="signup generic-theme-blue-2 btn btn-large">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+</main>	
+
+<!-- Footer Content: insert footer -->
+    {{> footer }}

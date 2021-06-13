@@ -1,0 +1,43 @@
+<!-- Login-Modal Structure -->
+<div id="login-modal" class="modal">
+	<!-- Login-Modal Exit Checkbox -->
+	<h5 class="modal-close">&#10005;</h5>
+	<br></br>
+
+	<!-- Login-Modal Content & Form Section -->
+	<div class="modal-content modal-dialog center">
+		<div class="loginmodal-container">
+			<div class="modal-introduction">
+				<h4>Employee Login</h4>
+    			<p class="modal-info">Please enter your username and password. If you do not remember your username or password, please contact your website administrator as the "Forgot Password?" feature is not currently available at this time.</p>
+				<p class="modal-info"><u class="underlined-red-light">Note</u>: your Generic CRM username and password will likely be different than the username and password that you use to login to the main Generic company website.</p>
+			</div>
+			<form class="login col s12">
+				<div class="row">
+					<div id="username-form" class="input-field col s12">
+						<label for="username-input">Username</label>
+						<input id="username-input" type="text" class="validate" name="user">
+						<small id="username-feedback" class=""></small>
+					</div>
+				</div>
+				<div class="row">
+					<div id="password-form" class="input-field col s12">
+						<label for="password-input">Password</label>
+						<input id="password-input" type="password" class="validate" name="pass">
+						<small id="password-feedback" class=""></small>	
+					</div>
+				<div class="row">
+					<div class="modal-footer">
+						<input type="submit" name="login" class="login loginmodal-submit btn-large" value="Login">
+    				</div>
+
+					<br>
+					<br>
+				</div>
+				{{!-- <div class="row">
+
+				</div> --}}
+			</form>
+		</div>
+	</div>
+</div>

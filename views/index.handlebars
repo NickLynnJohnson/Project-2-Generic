@@ -1,0 +1,80 @@
+<!-- Index Template: root landing page layout -->
+
+<!-- Header Content: insert nav partial -->
+<header>
+    {{> nav }}
+    {{> login-modal }}
+</header>
+<!-- Main Content: root landing page theme -->
+<main class="container">
+    <!-- Section 1: title and welcome -->
+    <section class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+                <h1 class="header center generic-text-blue">Customer Resource Manager</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">A simpler way to keep in touch with investors</h5>
+                </div>
+                <div class="row center">
+                    {{#if isAuthenticated}}
+                        <div id="download-button" class="btn-large waves-effect waves-light generic-theme-red">User status: Currently Logged In</a>
+                    {{else}}
+                        <a href="#login-modal" class="btn-large modal-trigger">Get Started</a>
+                    {{/if}}    
+                </div>
+            <br><br>
+        </div>
+    </section>
+
+    <!-- Section 2: information about generic CRM features -->
+    <section class="section">
+        <div class="homepage row">
+            <!-- Article 1: search for investors-->
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <h5 class="center underlined-red">Investor Search</h5>
+
+                    <p class="light">Easily search for investor information all within one browser. After entering the name or email of the investor you are trying to locate, the Generic CRM will render as many matches it can find including additional contact data or investment preferences. Remember to select how many matches you would like to show per page.</p>
+                </div>
+            </article>
+            <!-- Article 2: add investors to mailing list -->
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <h5 class="center underlined-red">Mailing List</h5>
+
+                    <p class="light">Add new investor members to Generic's mailing list provider, Mailchimp, without having to access a separate website. The mailing list form will prompt you to enter their first name, last name, and email address and will pass this data on to Mailchimp creating a new member record within the Mailchimp platform.</p>
+                </div>
+            </article>
+            <!-- Article 3: feature requests?-->
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <h5 class="center underlined-red">Give Feedback</h5>
+
+                    <p class="light">Thank you for using the Generic CRM! Please contact your website administrator to share ideas you might have to make this site even better. Perfecting a business-unique application is an iterative process, and we would love to hear feedback on what aspects are helpful and what instead could use improvement.</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Icon row for articles-->
+        <div class="homepage row">
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <p class="center"><i class="material-icons large">search</i></p>
+                </div>
+            </article>
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <p class="center"><i class="material-icons large">contact_mail</i></p>
+                </div>
+            </article>
+            <article class="col s12 m4">
+                <div class="icon-block">
+                    <p class="center"><i class="material-icons large">feedback</i></p>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Content: insert footer -->
+    {{> footer-main }}
