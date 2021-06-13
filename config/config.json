@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "enterapassword",
+    "password": "enteryourpasswordhere",
     "database": "project2_generic",
     "host": "127.0.0.1",
     "dialect": "mysql"
