@@ -1,0 +1,40 @@
+<!-- Mailing list page -->
+
+<!-- Header Content: insert nav partial -->
+<header>
+    {{> nav }}
+    {{!-- {{> login-modal }} --}}
+</header>
+
+<!-- Main Content: mailing list add investor contact theme -->
+<main class="container">
+
+    <div class="row">
+    <!-- Section 1: search for investor form -->
+    <div class="section col l6">
+        <form>
+            <h3>New Mailing List Member</h3>
+            <p>
+                Please enter the first name, last name, and email address for the investor contact you would like to add to the Mailchimp Mailing List as a new member.
+            </p>
+            <label for="mailing-list-fname">First Name</label>
+            <input type="text" id="mailing-list-fname"> 
+            <label for="mailing-list-lname">Last Name</label>
+            <input type="text" id="mailing-list-lname">
+            <label for="mailing-list-email">Email</label>
+            <input type="email" id="mailing-list-email">
+
+            <button type="submit" id="mailing-list-button" class="generic-theme-red btn btn-large">Submit New Mailing List Member</button>
+        </form>
+    </div>
+    <br>
+    <!-- Section 2: empty space for formatting -->
+    <div class="section col l6">
+        <div>
+        </div>
+    </div>
+    </div>
+</main>	
+
+<!-- Footer Content: insert footer -->
+    {{> footer }}      

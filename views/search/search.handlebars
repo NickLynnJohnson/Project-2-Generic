@@ -1,0 +1,85 @@
+<!-- Investor search page -->
+
+<!-- Header Content: insert nav partial -->
+<header>
+    {{> nav }}
+    {{!-- {{> login-modal }} --}}
+</header>
+
+<!-- Main Content: investor search theme -->
+<main class="container">
+    <!-- Section 1: search for investor form -->
+    <div class="row">
+        <section class="section col l6">
+            <form>
+                <h3>Search for an Investor</h3>
+                <p>
+                    Please enter the first name, last name, or email address for the investor contact you are searching for.
+                </p>
+                <label for="search-input">Search Criteria</label>
+                <input type="text" name="searchText" id="search-input"  placeholder="Any..">
+                <button type="submit" id="submitSearch" class="search-button generic-theme-red btn btn-large" href="/search/new/">Submit Search</button>
+                <button type="button" class="search-button generic-theme-red btn btn-large">Reset</button>
+            </form>
+        </section>
+        <section class="section col l6">
+            <div>
+                <!-- Blank space formatting -->
+            </div>
+        </section>
+    </div>
+    <!-- Section 2: search results cards -->
+    <div class="row">
+        <section class="section col l12">
+            <div>
+                {{#if investor}}
+                    {{#each investor}}
+                        <div class="card generic-theme-blue-main product-card">
+                            <div class="card-content white-text">
+                                <span class="card-title" id="name">{{this.firstname}} {{this.lastname}}</span>
+                                <ul>
+                                    
+                                    {{#if this.email}}<li>Email: <span id="email">{{this.email}}</span></li>{{/if}}
+                                    {{#if this.jobtitle}}<li>Title: <span class="product-card-desc" id="title">{{this.jobtitle}}</span></li>{{/if}}
+                                    {{#if this.address}}<li>Address: <span class="product-card-desc" id="address">{{this.address}}</span></li>{{/if}}
+                                    {{#if this.city}}<li>City: <span class="product-card-desc" id="city">{{this.city}}</span></li>{{/if}}
+                                    {{#if this.state}}<li>State: <span class="product-card-desc" id="state">{{this.state}}</span></li>{{/if}}
+                                    {{#if this.zip}}<li>Zip Code: <span class="product-card-desc" id="zip">{{this.zip}}</span></li>{{/if}}
+                                    {{#if this.phone}}<li>Number: <span class="product-card-desc" id="phone">{{this.phone}}</span></li>{{/if}}
+                                    {{#if this.cs_do_not_call}}<li>Open to Call? <span class="product-card-desc" id="nocall">{{this.cs_do_not_call}}</span></li>{{/if}}
+                                    {{#if this.this.cs_do_not_email}}<li>Open to Email? <span class="product-card-desc" id="noemail">{{this.cs_do_not_email}}</span></li>{{/if}}
+                                    {{#if this.cs_is_active}}<li>Is Active? <span class="product-card-desc" id="active">{{this.cs_is_active}}</span></li>{{/if}}
+                                    {{#if this.cs_is_accredited}}<li>Is Accredited? <span class="product-card-desc" id="accurated">{{this.cs_is_accredited}}</span></li>{{/if}}
+                                    {{#if this.cs_is_investor}}<li>Is Investor? <span class="product-card-desc" id="investor">{{this.cs_is_investor}}</span></li>{{/if}}
+                                    {{#if this.cs_average_investment_amount}}<li>Avg Investment: <span class="product-card-desc" id="investment">{{this.cs_average_investment_amount}}</span></li>{{/if}}
+                                    {{#if this.contact_type}}<li>Contact Type: <span class="product-card-desc" id="contact-type">{{this.contact_type}}</span></li>{{/if}}
+                                    {{#if this.cs_is_registered}}<li>Is Registered? <span class="product-card-desc" id="registered">{{this.cs_is_registered}}</span></li>{{/if}}
+                                </ul>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/if}}
+            </div> 
+        </section>
+    </row>
+    <div class="row">
+        <section class="section col l12">
+            <ul class = "pagination center">
+                <li class = "disabled"><a href = "#!">
+                    <i class = "material-icons">chevron_left</i></a>
+                </li>
+                <li class = "active"><a href = "#!">1</a></li>
+                <li class = "waves-effect"><a href = "#!">2</a></li>
+                <li class = "waves-effect"><a href = "#!">3</a></li>
+                <li class = "waves-effect"><a href = "#!">4</a></li>
+                <li class = "waves-effect"><a href = "#!">5</a></li>
+                <li class = "waves-effect"><a href = "#!">
+                    <i class = "material-icons">chevron_right</i></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>	
+
+<!-- Footer Content: insert footer -->
+    {{> footer }}      

@@ -1,0 +1,42 @@
+{
+  "name": "project-2-generic",
+  "title": "",
+  "version": "1.0.0",
+  "homepage": "www.google.com",
+  "author": "Professional Amateurs",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/NickLynnJohnson/Project-2-Generic"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "watch": "nodemon ./bin/www"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.6.3",
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickLynnJohnson/Project-2-Generic"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "engines": {
+    "node": "14.5.0"
+  }
+}
