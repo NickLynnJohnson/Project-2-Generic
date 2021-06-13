@@ -1,6 +1,6 @@
 # Project-2-Generic
 
-![Project-2-Generic](./assets/img/Project-2-Generic-Homepage.png?raw=true "Project 2 Generic")
+![Project-2-Generic](./public/assets/img/Project-2-Generic-Homepage.png?raw=true "Project 2 Generic")
 
 ## Description
 
